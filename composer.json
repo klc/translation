@@ -1,0 +1,23 @@
+{
+    "name": "klc/translation",
+    "description": "php translation package",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mustafa Kılıç",
+            "email": "m_kilic@outlook.com.tr"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php" : ">=7.4",
+        "ext-redis" : "*",
+        "klc/data-chain": "^1.0",
+        "illuminate/console": "^8.42",
+        "illuminate/filesystem": "^8.42",
+        "illuminate/support": "^8.42",
+        "illuminate/database": "8.x-dev",
+        "illuminate/redis": "8.x-dev"
+    }
+}
