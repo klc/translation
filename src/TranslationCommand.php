@@ -12,10 +12,10 @@ class TranslationCommand extends Command
     protected $description = 'installing translation package';
 
     protected $files = [
-        'stubs/models/Language.stub' => 'app/Models/Language.php',
-        'stubs/models/Translation.stub' => 'app/Models/Translation.php',
-        'stubs/migrations/2021_08_28_074159_create_languages_table.php' => 'database/migrations/2021_08_28_074159_create_languages_table.php',
-        'stubs/migrations/2021_08_28_074251_create_translations_table.php' => 'database/migrations/2021_08_28_074251_create_translations_table.php',
+        __DIR__.'/../stubs/models/Language.stub' => 'app/Models/Language.php',
+        __DIR__.'/../stubs/models/Translation.stub' => 'app/Models/Translation.php',
+        __DIR__.'/../stubs/migrations/2021_08_28_074159_create_languages_table.php' => 'database/migrations/2021_08_28_074159_create_languages_table.php',
+        __DIR__.'/../stubs/migrations/2021_08_28_074251_create_translations_table.php' => 'database/migrations/2021_08_28_074251_create_translations_table.php',
     ];
 
     public function handle()
