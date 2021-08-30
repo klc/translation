@@ -33,7 +33,7 @@ class Translation
         $db = new TranslationFromDb();
 
         $memory->next($cache)->next($db);
-        $translate = $memory->handle(['language_id' => $languageId, 'slug' => $slug]);
+        $translate = $memory->run(['language_id' => $languageId, 'slug' => $slug]);
 
         return sprintf($translate, ...$params);
     }
