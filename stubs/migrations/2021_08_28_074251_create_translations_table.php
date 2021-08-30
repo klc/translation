@@ -3,6 +3,8 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\Language;
+use App\Models\Translation;
 
 class CreateTranslationsTable extends Migration
 {
@@ -22,6 +24,36 @@ class CreateTranslationsTable extends Migration
 
             $table->unique(['language_id', 'slug']);
         });
+
+        $languages = Language::all()->keyBy('code');
+
+        Translation::insert([
+            [
+                'language_id' => $languages['TR']->id,
+                'slug' => 'hello_world',
+                'translation' => 'Merhaba Dünya'
+            ], [
+                'language_id' => $languages['EN']->id,
+                'slug' => 'hello_world',
+                'translation' => 'Hello World'
+            ], [
+                'language_id' => $languages['DE']->id,
+                'slug' => 'hello_world',
+                'translation' => 'Hallo Welt '
+            ], [
+                'language_id' => $languages['TR']->id,
+                'slug' => 'hello',
+                'translation' => 'Merhaba %s'
+            ], [
+                'language_id' => $languages['EN']->id,
+                'slug' => 'hello',
+                'translation' => 'Hello %s'
+            ], [
+                'language_id' => $languages['DE']->id,
+                'slug' => 'hello',
+                'translation' => 'Hallo %s'
+            ]
+        ]);
     }
 
     /**
