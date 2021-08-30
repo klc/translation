@@ -26,5 +26,10 @@
                 "KLC\\TranslationServiceProvider"
             ]
         }
+    },
+    "autoload": {
+        "psr-4": {
+            "KLC\\" : "src/"
+        }
     }
 }
