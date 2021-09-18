@@ -2,7 +2,6 @@
 
 namespace KLC;
 
-use KLC\DataChain;
 use Illuminate\Redis\Connections\Connection;
 use Illuminate\Support\Facades\Redis;
 

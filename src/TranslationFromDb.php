@@ -2,7 +2,6 @@
 
 namespace KLC;
 
-use KLC\DataChain;
 use App\Models\Translation as TranslationModel;
 
 class TranslationFromDb extends DataChain

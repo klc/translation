@@ -2,8 +2,6 @@
 
 namespace KLC;
 
-use KLC\DataChain;
-
 class TranslationFromMemory extends DataChain
 {
     protected static $translations = [];

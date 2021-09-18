@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -15,10 +16,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property Carbon created_at
  * @property Carbon updated_at
  *
- * @method static \Illuminate\Database\Eloquent\Builder|Language newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Language newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Language query()
- * @mixin \Eloquent
+ * @mixin Builder
  */
 class Language extends Model
 {
@@ -26,4 +24,9 @@ class Language extends Model
 
     protected $table = 'languages';
     protected $fillable = ['name', 'code'];
+
+    public function translations()
+    {
+        return $this->hasMany(Translation::class);
+    }
 }

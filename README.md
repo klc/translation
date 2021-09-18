@@ -2,8 +2,6 @@
 
 `composer require klc/translation`
 
-`php artisan translation:install`
-
 `php artisan migrate`
 
 

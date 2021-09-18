@@ -22,19 +22,6 @@ class CreateLanguagesTable extends Migration
 
             $table->unique('code');
         });
-
-       Language::insert([
-            [
-                'name' => 'Türkçe',
-                'code' => 'TR'
-            ], [
-                'name' => 'English',
-                'code' => 'EN'
-            ], [
-                'name' => 'Deutsch',
-                'code' => 'DE'
-            ]
-        ]);
     }
 
     /**
