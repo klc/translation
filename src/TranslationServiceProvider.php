@@ -14,7 +14,7 @@ class TranslationServiceProvider extends ServiceProvider
             $this->publishes([
                 __DIR__ . '/../database/migrations' => $this->app->databasePath('migrations'),
                 __DIR__ . '/../app/Models' => $this->app->basePath('app/Models')
-            ], 'klc-translation');
+            ], 'laravel-assets');
         }
     }
 }
